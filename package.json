@@ -1,0 +1,28 @@
+{
+  "name": "pnpm-workspace-changeset",
+  "version": "0.1.0",
+  "description": "monorepo",
+  "main": "index.js",
+  "scripts": {
+    "start-ui": "pnpm --filter=@repo/ui run start",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboutUU/Pnpm-workspace-changeset.git"
+  },
+  "keywords": [
+    "monorepo"
+  ],
+  "author": "leijiaqiang <leijiaqiang@paxsz.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aboutUU/Pnpm-workspace-changeset/issues"
+  },
+  "homepage": "https://github.com/aboutUU/Pnpm-workspace-changeset#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.22.0",
+    "rimraf": "^3.0.2"
+  }
+}
