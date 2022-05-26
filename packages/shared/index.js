@@ -7,3 +7,5 @@
 export const handleCommon = () => {
     console.log('============:我来自shared1111。');
 }
+
+export const a = 1;

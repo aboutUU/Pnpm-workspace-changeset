@@ -5,12 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start-ui": "pnpm --filter=@repo/ui run start",
-    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
-    "preinstall": "npx only-allow pnpm"
+    "build": "pnpm --filter=@repo/ui run build",
+    "clear": "rimraf 'packages/*/{build,node_modules}' && rimraf node_modules",
+    "preinstall": "npx only-allow pnpm",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "publish": "changeset publish",
+    "release:publish": "pnpm build && pnpm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aboutUU/Pnpm-workspace-changeset.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
   },
   "keywords": [
     "monorepo"
